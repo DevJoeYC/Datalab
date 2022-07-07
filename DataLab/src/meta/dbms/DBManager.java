@@ -29,29 +29,10 @@ public class DBManager
 
 	public DBManager()
 	{
-		this.host	= "jdbc:mysql://silverwoods.synology.me:3306/CTEAM?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC";
+		this.host	= "jdbc:mysql://192.168.0.200:3306/datalab?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC";
 		this.userid	= "CTEAM";
 		this.passwd	= "E2en_java_(team";
 	}
-
-/* 인자값을 이용한 DB 접속용 생성자********************************************************************************************************
-	public DBManager(String userid, String passwd)
-	{
-		this.host	= "jdbc:mysql://silverwoods.synology.me:3306/CTEAM?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC";
-		this.userid	= userid;
-		this.passwd	= passwd;
-	}
-
-	public DBManager(String IP, String database, String userid, String passwd)
-	{
-		this.host	 = "jdbc:mysql://";
-		this.host	+= IP += "/"+ database;
-		this.host	+= "?useUnicode=true&characterEncoding=utf-8";
-		this.host	+= "&serverTimezone=UTC";
-		this.userid	= userid;
-		this.passwd	= passwd;
-	}
-******************************************************************************************************************************************/
 
 	//DB를 연결한다. //리턴값 : 성공시 true, 실패시 false
 	public boolean DBOpen()
